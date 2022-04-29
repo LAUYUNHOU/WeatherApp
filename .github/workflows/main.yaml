@@ -1,6 +1,8 @@
 name: My First Workflow
 on:
   push: 
+    branches:
+    - "deploy"
 
 jobs:
   echo_the_date:
