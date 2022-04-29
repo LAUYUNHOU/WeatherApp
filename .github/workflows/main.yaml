@@ -1,9 +1,7 @@
 name: My First Workflow
 on:
   push: 
-    branches:
-    - "deploy"
-
+  
 jobs:
   echo_the_date:
     runs-on: Windows-latest
@@ -14,9 +12,6 @@ jobs:
 
     #- name: Stimulate a fail
     #  run: exit 1
-    - name: Greeting to the world
-      run: echo "Hell World"
-
     - name: echo the current branch
       run: echo ${{ github.ref_name }}
 
