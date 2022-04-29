@@ -20,3 +20,19 @@ jobs:
     - name: echo the current branch
       run: echo ${{ github.ref_name }}
 
+
+  test_and_deploy:
+    runs-on: Windows-latest
+    steps:
+
+    - name: Setup maven
+      uses: stCarolas/setup-maven@v4.3
+      with:
+        maven-version: 3.8.2
+
+    - name: Checkout the source
+      uses: actions/checkout@v3  
+
+    - name: Run test
+      run: mvn clean test
+
