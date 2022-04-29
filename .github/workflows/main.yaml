@@ -23,6 +23,8 @@ jobs:
 
   test_and_deploy:
     runs-on: Windows-latest
+    env:
+      OPENWEATHERMAP_API: ${{ secrets.openweathermap_api }}
     steps:
 
     - name: Setup maven
